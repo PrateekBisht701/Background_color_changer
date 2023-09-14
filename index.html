@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Changer</title>
+
+    <style>
+        body {
+            margin: 100px auto;
+            padding: 0;
+            text-align: center;
+            border: 1px solid black;
+            width: 50%;
+        }
+        .main {
+            margin: 0 auto;
+            padding: 50px;
+        }
+
+        h1 {
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            margin-top: 100px;
+            font-weight: 300;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        span {
+            padding: 50px;
+            border: 3px solid black;
+        }
+
+        #white {
+            background-color: white;
+        }
+
+        #grey {
+            background-color: grey;
+        }
+
+        #yellow {
+            background-color: yellow;
+        }
+
+        #blue {
+            background-color: lightskyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Background Color Changer</h1>
+
+        <span class="btn" id="white">1</span>
+        <span class="btn" id="grey">2</span>
+        <span class="btn" id="yellow">3</span>
+        <span class="btn" id="blue">4</span>
+
+        <h2>Try clicking on one of the colors above <br> to change the background color of this page !! </h2>
+    </div>
+
+    
+  <script>
+
+    const button = document.querySelectorAll('.btn')
+    const body = document.querySelector('body')
+    console.log(button)
+
+    button.forEach((button) => {
+        
+        button.addEventListener('click', (e) => {
+
+            if(e.target.id === 'white'){
+                body.style.backgroundColor = e.target.id
+            }
+            else if(e.target.id === 'grey'){
+                body.style.backgroundColor = e.target.id
+            }
+            else if(e.target.id === 'yellow'){
+                body.style.backgroundColor = e.target.id
+            }
+            else if(e.target.id === 'blue'){
+                body.style.backgroundColor = e.target.id
+                
+            }
+        })
+
+    })
+
+
+  </script>
+</body>
+
+</html>
